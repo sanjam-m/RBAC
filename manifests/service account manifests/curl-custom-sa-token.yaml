@@ -2,7 +2,7 @@ apiVersion: v1
 kind: Pod
 metadata: 
    name: curl-custom-sa-token
-   namespace: week11
+   namespace: lab4
    labels:
      week: "week11"
 spec:
