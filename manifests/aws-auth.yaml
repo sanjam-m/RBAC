@@ -2,7 +2,7 @@ apiVersion: v1
 data:
   mapUsers: |
     - userarn: arn:aws:iam::047923129740:user/clo835
-      username: clo835
+      username: clo835admins
   mapRoles: |
     - groups:
       - system:bootstrappers
