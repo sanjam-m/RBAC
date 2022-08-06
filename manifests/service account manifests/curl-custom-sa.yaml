@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: Pod
+metadata: 
+   name: curl-custom-sa
+   namespace: week11
+   labels:
+     week: "week11"
+spec:
+  serviceAccountName: clo835
+  containers:
+  - name: main
+    image: curlimages/curl
+    command: ["sleep", "999999"]
+   # The ambassador container uses the token when talking to the server, so you can test
+   # the token by going through the ambassador, which listens on localhost:8001, as
+   # shown in the following listing.
+  - name: ambassador
+    image: luksa/kubectl-proxy:1.6.2

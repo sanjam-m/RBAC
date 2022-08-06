@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Pod
+metadata: 
+   name: curl-custom-sa-token
+   namespace: week11
+   labels:
+     week: "week11"
+spec:
+  serviceAccountName: clo835
+  containers:
+  - name: main
+    image: curlimages/curl
+    command: ["sleep", "999999"]
